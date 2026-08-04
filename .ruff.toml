@@ -1,0 +1,11 @@
+exclude = [
+    "venv",
+    "repositories",
+    "backups",
+    "knowledge",
+    "memory",
+]
+
+lint.ignore = [
+    "N999",
+]
