@@ -3,13 +3,19 @@ import subprocess
 
 class PytestValidator:
 
-    def validate(self):
+    def validate(
+        self,
+        directory="tests",
+    ):
 
         result = subprocess.run(
-    ["pytest"],
-    capture_output=True,
-    text=True,
-    check=False,
+            [
+                "pytest",
+                directory,
+            ],
+            capture_output=True,
+            text=True,
+            check=False,
         )
 
         return {
